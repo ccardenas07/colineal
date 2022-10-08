@@ -1,0 +1,496 @@
+/* 
+	Resets defualt browser settings
+	reset.css
+*/
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td { margin:0; padding:0; border:0; outline:0; font-weight:inherit; font-style:inherit; font-size:100%; font-family:inherit; vertical-align:baseline; }
+:focus { outline:0; }
+a:active { outline:none; }
+body { line-height:1; }
+/*body { line-height:1; color:black; background:#ccc; }*/
+ol,ul { list-style:none; }
+table { border-collapse:separate; border-spacing:0; }
+caption,th,td { text-align:left; font-weight:normal; }
+blockquote:before,blockquote:after,q:before,q:after { content:""; }
+blockquote,q { quotes:"" ""; }
+
+/*
+	Page Style
+*/
+body { 
+	font:normal 62.5%/1.5 Helvetica, Arial, sans-serif;
+	letter-spacing:0;
+	/*color:#000;*/
+	background:url(../img/fondo-trivia.jpg) no-repeat ; 
+	/*background:url(../img/fondo-trivia.jpg) no-repeat top center scroll #000; */
+	/*height: 790px;*/
+    /*width: 690px;*/
+	position:relative;
+	text-shadow:0 1px 0 rgba(255,255,255,.8);
+	-webkit-font-smoothing: subpixel-antialiased;
+}
+
+#container {
+	width:520px;
+	height:550px;
+	padding-top:120px;
+	margin:0 auto;
+	position:relative;
+	z-index:0;
+	margin-left:473px;
+
+}
+
+#frame {
+	position:absolute;
+	z-index:0;
+	width:520px;
+	height:341px;
+	top:-3px;
+	left:-80px;
+}
+
+#example {
+	width:480px;
+	height:450px;
+	position:relative;
+}
+
+/*
+	Slideshow style
+*/
+
+#slides {
+	position:absolute;
+	top:15px;
+	left:4px;
+	z-index:100;
+	margin-left:-361px;
+	
+}
+
+/*
+	Slides container
+	Important:
+	Set the width of your slides container
+	If height not specified height will be set by the slide content
+	Set to display none, prevents content flash
+*/
+
+.slides_container {
+	width:520px;
+	height:450px;
+	overflow:hidden;
+	position:relative;
+	display:none;
+}
+
+/*
+	Each slide
+	Important:
+	Set the width of your slides
+	Offeset for the 20px of padding
+	If height not specified height will be set by the slide content
+	Set to display block
+*/
+
+#slides .slide {
+	margin:250px 0px;
+	padding:20px;
+	width:500px;
+	height:450px;
+	display:block;
+	/*background:#EDEFDA;*/
+	font-size:14px !important;
+	font-family:Tahoma, Geneva, sans-serif;
+}
+
+/*
+	Next/prev buttons
+*/
+#slides .next,#slides .prev {
+	position:absolute;
+	top:107px;
+	left:-39px;
+	width:24px;
+	height:43px;
+	display:block;
+	z-index:101;
+
+}
+
+#slides .next {
+	left:520px;
+}
+
+/*
+	Pagination
+*/
+
+.pagination {
+	visibility:hidden;
+	margin:26px auto 0;
+	width:100px;
+}
+
+.pagination li {
+	float:left;
+	margin:0 1px;
+	list-style:none;
+}
+
+.pagination li a {
+	display:block;
+	width:12px;
+	height:0;
+	padding-top:12px;
+	/*background-image:url(../img/pagination.png);*/
+	background-position:0 0;
+	float:left;
+	overflow:hidden;
+}
+
+.pagination li.current a {
+	background-position:0 -12px;
+}
+
+/*
+	Footer
+*/
+
+#footer {
+	text-align:center;
+	width:520px;
+	margin-top:9px;
+	padding:4.5px 0 18px;
+	border-top:1px solid #dfdfdf;
+	margin-left: auto;
+    margin-right: auto;
+}
+
+#footer p {
+	margin:4.5px 0;
+	font-size:1.0em;
+}
+
+/*
+	Type and anchors
+*/
+
+a:link,a:visited {
+	color:#333;
+	text-decoration:none;
+	padding-left:20px;
+}
+
+a:hover,a:active {
+	color:#DDD;
+	text-decoration:underline;
+}
+
+h1 {
+	font-size:2em;
+	text-decoration:none;
+}
+h1:hover
+{
+	color:#F60;
+	text-decoration:none;
+}
+
+p {
+
+	font-weight:bold;
+		font-size:18px !important;
+	font-family:Tahoma, Geneva, sans-serif;
+	text-align:justify;
+}
+
+p .a
+{
+	font-size:15px !important;
+	font-family:Tahoma, Geneva, sans-serif;
+	text-align:justify;
+
+
+}
+
+#slides .link {
+	display:block;
+	margin-top:5px;
+	font-weight:normal;
+	text-decoration:none !important;
+	
+}
+
+#slides .link:hover {
+	color:#390;
+	
+}
+
+img
+{
+	border:none;
+}
+/***********************************/
+/*posicion de formulario*/
+
+.formulario
+
+{
+
+	
+
+	 color:#717171;
+
+	 font-family:'FuturaBT-Book';
+          /*margin-left: 405px !important;*/
+         /* margin-left: 385px !important;
+
+     margin-top: -420px !important;*/
+	 margin-left: 191px !important;
+    margin-top: 302px !important;
+
+	 
+
+}
+
+/*posicion campo de texto nombre*/
+
+.nombre
+
+{
+
+	margin-left: 96px;
+
+    margin-top: -12px;
+    
+
+	
+
+}
+
+/*posicion campo de texto apellido*/
+
+.apellido
+
+{
+    margin-left:201px;
+    margin-top:-31px;
+    /*margin-left: 223px;
+    margin-top: -31px;*/
+}
+
+/*posicion campo de texto edad*/
+
+.edad
+
+{
+
+    margin-left: 96px;
+
+    margin-top: -9px;
+
+}
+
+/*posicion campo de texto celular*/
+
+.celular
+
+{
+
+	margin-left: 97px;
+
+    margin-top: -25px;
+
+}
+
+/*posicion campo de texto email*/
+
+.email
+
+{
+
+	margin-top: -26px;
+
+	margin-left: 96px;
+
+}
+
+/*posicion campo de texto cedula*/
+
+.cedula
+
+{
+
+	margin-top: -24px;
+
+	margin-left: 95px;
+
+}
+
+/*posicion campo de texto ciudad*/
+
+.ciudad
+
+{
+
+	margin-top: -24px;
+
+	margin-left: 95px;
+
+}
+
+/*posicion label de texto nombre*/
+
+.lnom
+
+{
+
+	margin-top: 23px;
+
+	margin-left: 22px;
+
+	width: 159px !important;
+
+	height: 5px !important;
+
+	z-index:100;
+
+	color: #FFFFFF;
+
+}
+
+/*posicion label edad*/
+
+.ledad
+
+{
+
+	height: 5px !important;
+
+    margin-left: 49px;
+
+    margin-top: 25px;
+
+    width: 159px !important;
+
+    z-index: 100;
+
+	color: #FFFFFF;
+
+}
+
+/*posicion label de texto cel*/
+
+.lcel
+
+{
+
+	margin-left: 34px;
+
+    margin-top: 28px;
+
+	color: #FFFFFF;
+
+	/*width:5px;
+
+	height:5px;*/
+
+}
+
+/*posicion label de texto email*/
+
+.lemail
+
+{
+
+	margin-top: 30px;
+
+	margin-left: 37px;
+
+	color: #FFFFFF;
+
+/*width:10px;
+
+	height:5px;*/
+
+}
+
+/*posicion label de texto ced*/
+
+.lced
+
+{
+
+	margin-top: 21px;
+
+	margin-left: 36px;
+
+	color: #FFFFFF;
+
+/*width:5px;
+
+	height:5px;*/
+
+}
+
+/*posicion label de texto ciudad*/
+
+.lciudad
+
+{
+
+	margin-left: 36px;
+
+    margin-top: 21px;
+
+    width: 50px;
+
+	color: #FFFFFF;
+
+}
+
+/*diseño de los inputs*/
+
+input
+
+{
+
+	padding:7px;
+
+    margin: 0;
+
+    -webkit-border-radius:4px;
+
+    -moz-border-radius:4px;
+
+    border-radius:4px;
+
+    -webkit-box-shadow: 0 3px 0 #ccc, 0 -1px #fff inset;
+
+    -moz-box-shadow: 0 3px 0 #ccc, 0 -1px #fff inset;
+
+    box-shadow: 0 3px 0 #ccc, 0 -1px #fff inset;
+
+    background: #f8f8f8;
+
+    color:#888;
+
+    border:none;
+
+    outline:none;
+
+    display: inline-block;
+
+    -webkit-appearance:none;
+
+    -moz-appearance:none;
+
+    appearance:none;
+
+    cursor:pointer;
+
+	
+
+}
+

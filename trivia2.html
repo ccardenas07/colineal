@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">	
+<title>Trivia Colienal</title>
+<script type="text/javascript" src="swfobject.js"></script>   
+	<link rel="stylesheet" href="css/global.css">	
+	<script src="js/jquery-1.9.1.min.js"></script>
+	<script src="js/slides.min.jquery.js"></script>
+	<script>
+		$(function(){
+			// Set starting slide to 1
+			var startSlide = 0;
+			// Get slide number if it exists
+			if (window.location.hash) {
+				startSlide = window.location.hash.replace('#','');
+			}
+			// Initialize Slides
+			$('#slides').slides({
+				preload: true,
+				preloadImage: 'img/loading.gif',
+				generatePagination: true,
+				play: false,
+				pause: 2500,
+				hoverPause: true,
+				// Get the starting slide
+				start: startSlide,
+				animationComplete: function(current){
+					// Set the slide number as a hash
+				window.location.hash = '#' + current;
+				}
+			});
+		}); 
+	
+	var calculo=0;
+	function calcular(punto){		
+		calculo = calculo + punto;
+		document.getElementById('calculo').value = calculo;
+		
+		if(calculo >= 5 )
+		{
+			document.getElementById('ocultar').style.visibility='hidden';			
+			alert('¡Felicidades !');				
+			window.location.assign("formulario.html");
+				
+		}	
+		else{
+			document.getElementById('ocultar').style.visibility='visible';
+			}	
+	}
+	
+	function limpiar(){
+		document.getElementById('calculo').value = '0';
+		calculo=0;
+	}
+
+</script>
+</head>
+<body >
+<blockquote>
+  <form name="datos" action="" method="post">
+    <div id="container">
+      <div id="example">
+        <div id="slides">
+          <div class="slides_container">
+           
+            <div class="slide">
+            <p>1.- ¿Cuáles son los tipos de pago para esta temporada de salas? </p>
+                <p><a href="2" class="link" onClick="calcular(0)"> De contado </a></p>    
+                <p><a href="2" class="link" onClick="calcular(0)">  6 meses con intereses </a></p>
+                <p><a href="2" class="link" onClick="calcular(1)">  12 meses sin intereses </a></p>
+               <!-- <p><a href="2" class="link" onClick="calcular(0)"> d) Negra </a></p> -->  
+            </div>
+			<div class="slide">
+            <p ><span >2.- Por esta temporada encuentra salas desde: _____</span>"</p>
+            	<p><a href="3" class="link" onClick="calcular(0)">  $1.000 </a></p> 
+                <p><a href="3" class="link" onClick="calcular(1)">  $799 </a></p> 
+                <p><a href="3" class="link" onClick="calcular(0)">  $800 </a></p> 
+               <!-- <p><a href="3" class="link" onClick="calcular(1)"> d) 499 dólares </a></p> -->
+            </div>
+            <div class="slide">
+            <p>3.- ¿Qué forma tiene el espejo que sale en la escena del perro?</p>
+                <p><a href="4" class="link" onClick="calcular(0)">  Cuadrada </a></p> 
+                <p><a href="4" class="link" onClick="calcular(0)">  Rectangular </a></p> 
+                <p><a href="4" class="link" onClick="calcular(1)">  Redonda </a></p> 
+                <!--<p><a href="4" class="link" onClick="calcular(0)"> d) Dulces </a></p> -->
+            </div>
+            <div class="slide">
+            <p> 4.- ¿Cómo se llama la sala que aparece con la pareja que está comiendo canguil?</p>
+                <p><a href="5" class="link" onClick="calcular(0)">  Sala Aveiro </a></p> 
+                <p><a href="5" class="link" onClick="calcular(1)">  Sala Acuario </a></p> 
+                <p><a href="5" class="link" onClick="calcular(0)">  Sala Floreana </a></p> 
+               <!--<p><a href="5" class="link" onClick="calcular(0)"> d) 499 dólares </a></p> -->
+            </div>
+            <div class="slide">
+            <p>5.- La Sala Laurel por esta temporada de salas tiene un precio promoción de: </p>
+                <p><a href="6" class="link" onClick="calcular(1)"> $2390</a></p> 
+                <p><a href="6" class="link" onClick="calcular(0)">  $700 </a></p> 
+                <p><a href="6" class="link" onClick="calcular(0)">  $1500 </a></p> 
+                <!--<p><a href="6" class="link" onClick="calcular(0)"> d) Rojo </a></p> -->
+            </div>           
+            <div class="slide">   
+            	<div id="ocultar" style="visibility:hidden;">             
+                     <p>Lastimosamente, no respondiste correctamente todas las preguntas de la Trivia Colineal por la temporada de salas 2014. Por favor, mira de nuevo el video y fíjate en todos los detalles.</p>
+                     <a href="video.html" target="_self"><h1 align="center">Ver Video de nuevo</h1></a>
+                 </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+      <div id="footer"> 
+        <input name="calculo" id="calculo" type="hidden" value="0" />
+      </div>
+    </form>
+</blockquote>
+</body>
+</html>

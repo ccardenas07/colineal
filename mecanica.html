@@ -1,0 +1,113 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en"xmlns="https://www.w3.org/1999/xhtml" xmlns:fb="http://ogp.me/ns/fb#">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!--<link href="css/global.css" type="text/css" rel="stylesheet" />-->
+<style type="text/css">
+.btnsig
+{
+	 /*margin-top: -41px;
+    padding-left: 303px;*/
+	 margin-top: -368px;
+    padding-left: 447px;
+	width:118px !important;
+	height:41px !important;
+}
+.btncompartir
+{
+	/*margin-top:-368px;
+	margin-left:100px;*/
+	margin-left: -428px;
+margin-top: -30px;
+	width:181px !important;
+	height:27px !important;
+	z-index:500;
+}
+.contenedor
+{
+	/*width:607px;
+	height:97px;*/
+
+}
+</style>
+<title></title>
+<!--facebook-->
+
+<div id="fb-root"></div>
+        <script>
+          // Additional JS functions here
+          window.fbAsyncInit = function() {
+            FB.init({
+              appId      : '1435200350055707', // App ID
+              channelUrl : 'https://appiglu.com/apps.facebook/colinealEC/colineal/index.php?', // Channel File
+              status     : true, // check login status
+              cookie     : true, // enable cookies to allow the server to access the session
+              xfbml      : true,  // parse XFBML
+			
+            });
+
+             // Additional init code here
+
+          };
+
+          // Load the SDK asynchronously
+          (function(d){
+             var js, id = 'facebook-jssdk', ref = d.getElementsByTagName('script')[0];
+             if (d.getElementById(id)) {return;}
+             js = d.createElement('script'); js.id = id; js.async = true;
+             js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=1435200350055707";
+             ref.parentNode.insertBefore(js, ref);
+			
+           }(document));
+        </script>
+
+<div id="fb-root"></div>
+<script>/*(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/es_LA/all.js#xfbml=1&appId=456712504440229";
+  fjs.parentNode.insertBefore(js, fjs); 
+}(document, 'script', 'facebook-jssdk'));*/</script>
+
+ <script type="text/javascript" > 
+                    function postOnWall(){
+                        FB.ui({
+                        method: 'feed',
+                        link: 'https://www.facebook.com/Colineal.EC/app_1435200350055707',
+
+                        picture: 'https://appiglu.com/apps.facebook/colinealEC/colineal/img/iconogrande.jpg',
+						href:'https://appiglu.com/apps.facebook/colinealEC/colineal/mecanica.html',
+                        name: '  Concurso Cinema ',
+                        caption: '',
+                        description: '¡Yo ya particip&eacute; en el Concurso Cinema! T&uacute; tambi&eacute;n divi&eacute;rtete con la Temporada de Salas Colineal. ¿Qu&eacute; esperas?',
+						
+                        }, function(response){
+							
+							});
+                    }  
+                </script>
+<!---->
+<!--fin facebook-->
+</head>
+
+<body>
+<center>
+<img src="img/instrucciones2.jpg"  />
+<div class="contenedor">
+
+<div class="btnsig">
+<a href="#" onclick="window.location='video.html'">
+<img src="img/btnvideo.jpg" width="118px" height="41px"  />
+</a>
+</div>
+
+<div class="btncompartir">
+<a id="share_link" href="#"onclick="postOnWall()" style="background: url('img/btncompartir.png') no-repeat; display: block; height: 27px; position: absolute; text-indent: -9999em;  width: 181px;">
+ </a>
+</div>
+
+</div>
+</center>
+</body>
+</html>

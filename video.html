@@ -1,0 +1,74 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Trivia Colineal</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
+<script type="text/javascript" src="swfobject.js"></script>   
+<script type="text/javascript">
+/*
+    function Player() {
+        var sStatus = document.getElementById("myytplayer").getPlayerState();
+        if (sStatus == -1) alert ("Video has not started.");
+        else if (sStatus == 0) {alert ("Video has ended.");  document.location.href=pagina; }
+        else if (sStatus == 1) alert ("Video is playing.");
+        else if (sStatus == 2) alert ("Video is paused.");
+        else if (sStatus == 3) alert ("Video is buffering.");
+        else if (sStatus == 5) alert ("Video is cued.");
+    }			
+*/
+
+    var params = { allowScriptAccess: "always" };
+    var atts = { id: "myytplayer" };
+    swfobject.embedSWF("https://www.youtube.com/v/2nvPBqWD3Gs?enablejsapi=1&playerapiid=ytplayer",
+	 
+                       "ytapiplayer", "560", "460", "8", null, null, params, atts);
+					   
+	function onYouTubePlayerReady(playerId)
+	 {
+		//alert(playerId);
+		ytplayer = document.getElementById("myytplayer");
+		//alert(2);
+		ytplayer.addEventListener("onStateChange", "onytplayerStateChange");
+		//alert(3);
+		//ytplayer.addEventListener("click", function(){alert('click');});
+		}
+		
+	function onytplayerStateChange(newState)
+	 {
+		//alert("Player's new state: " + newState);
+		if(newState==0)
+			//document.getElementById("links").click();
+			document.location.href="trivia.html";
+	} 				   
+	
+</script>	
+<style type="text/css">
+body {
+	background:url(img/presentacion2_video.jpg) no-repeat;
+	/*height: 790px; */
+	/*
+    width:690px;*/}
+body p{
+	text-align: center;
+}
+
+.videos {
+	text-align: center;
+	/*padding: 318px 0px 0px 0px;*/
+	margin: 0 auto;
+	padding-left: 8px;
+	padding-top: 288px;
+}
+}
+</style>
+</head>
+<body>
+<div class="videos">
+    <div id="ytapiplayer">           
+       <p>Se necesita Flash player 8+ y JavaScript habilitado para poder ver este video.    </p>            
+    </div><script type="text/javascript" language="javascript" >                                                                                                                                                                                                                                                                                                                                                                               </script>
+ 
+</div>
+</body>
+</html>
